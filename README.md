@@ -7,15 +7,17 @@ Write a Flask Web API with only 1 method called “ProcessPayment” that receiv
 - ExpirationDate (mandatory, DateTime, it cannot be in the past)
 - SecurityCode (optional, string, 3 digits)
 - Amount (mandatoy decimal, positive amount)
+
 The response of this method should be 1 of the followings based on
 - Payment is processed: 200 OK
 - The request is invalid: 400 bad request
 - Any error: 500 internal server error
-The payment could be processed using different payment providers (external services)
-called:
+
+The payment could be processed using different payment providers (external services) called:
 - PremiumPaymentGateway
 - ExpensivePaymentGateway
 - CheapPaymentGateway.
+
 The payment gateway that should be used to process each payment follows the next set of
 business rules:
 
