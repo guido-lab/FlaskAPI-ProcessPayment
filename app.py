@@ -20,7 +20,7 @@ def query_records():
     name = Payments.query.all()
     post_schema = PaymentsSerializer()
     posts_schema = PaymentsSerializer(many=True)
-    # records = json.loads(name)
+    
     return {"data": posts_schema.dump(name)} 
 
 
