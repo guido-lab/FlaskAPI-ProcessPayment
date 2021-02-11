@@ -19,7 +19,7 @@ class GetwayType(db.Model):
     name = db.Column(db.String(50))
     descripton = db.Column(db.Text)
     deleted = db.Column(db.Boolean, default=False, nullable=False)
-    payments = relationship("Payments")
+    payments = relationship("Payments") # havinvg a relation with Payments table
 
 class Payments(db.Model):
     __tablename__ = 'payments'
